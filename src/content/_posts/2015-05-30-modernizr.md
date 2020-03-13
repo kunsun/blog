@@ -1,7 +1,8 @@
 ---
+path: "/modernizr"
 title: Modernizr分析
 layout: post
-date: 2015/05/30
+date: "2015-05-30"
 ---
 
 一直认为学习一个工具或者一门语言做好的方法就是看原生文档， 这次[Modernizr](http://modernizr.com/)的学习再次确认了这个想法。 因为之前几天偷懒，三三两两的看关于Modernizr的中文文档，远没有今天专注花两个小时阅读[官方文档](http://modernizr.com/docs/)管用。

@@ -1,7 +1,8 @@
 ---
+path: "/nodelist-vs-htmlcollection"
 title: NodeList和HTMLCollection的区别
 layout: post
-date: 2015/06/13
+date: "2015-06-13"
 ---
 NodeList和HTMLCollection是Dom中两个非常相似的概念，今天研究了一小会会，总结一下下。
 

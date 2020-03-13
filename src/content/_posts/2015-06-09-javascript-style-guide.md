@@ -1,7 +1,8 @@
 ---
+path: "/javascript-stype-guide"
 title: Javascript编码风格
 layout: post
-date: 2015/06/09
+date: "2015-06-09"
 
 ---
 > 参照github上的[文章](https://github.com/airbnb/javascript/tree/master/es5)。权当是学习笔记。
