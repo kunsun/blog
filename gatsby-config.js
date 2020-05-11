@@ -15,6 +15,13 @@ module.exports = {
         path: path.resolve('./src/content/_posts'),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.resolve('./src/images'),
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
   ]

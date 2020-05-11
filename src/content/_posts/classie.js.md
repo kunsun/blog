@@ -23,7 +23,7 @@ classie只有4个方法，分别是：
 
 ### 源码分析
 首先介绍一下classList属性， classList是HTML5为javascipt的class操作新增的API。之前在操作类名时，需要通过className属性，className属性是一个字符串，使用className操作类名会涉及到很多字符串处理，很麻烦。新增的classList属性简化了这些操作。下面的代码就是使用classList属性进行了class的操作。
-	
+```js
 	if ( 'classList' in document.documentElement ) {
   		hasClass = function( elem, c ) {
     		return elem.classList.contains( c );
@@ -35,9 +35,9 @@ classie只有4个方法，分别是：
     		elem.classList.remove( c );
   		};
 	}
-	
+```	
 支持className属性的浏览器有Firefox3.6+和Chrome。所以在低版本中使用了另外一种写法。
-
+```
 	else {
   		hasClass = function( elem, c ) {
     		return classReg( c ).test( elem.className );
@@ -51,21 +51,22 @@ classie只有4个方法，分别是：
     		elem.className = elem.className.replace( classReg( c ), ' ' );
   		};
 	}
-	
+```
 其中classReg使用如下方法找到class ：
-
+```js
 	function classReg( className ) {
   		return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
 	}
+```
 这里使用的是对className属性进行字符串处理。
 
 最后加上toggleClass。
-
+```
 	function toggleClass( elem, c ) {
   		var fn = hasClass( elem, c ) ? removeClass : addClass;
   		fn( elem, c );
 	}
-	
+```	
 ### 总结
 classie.js源码分析如上。 附classie.js的[github地址](https://github.com/desandro/classie)。
 
