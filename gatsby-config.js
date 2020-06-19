@@ -28,7 +28,9 @@ module.exports = {
           resolve: `gatsby-remark-images`,
         }]
       }
-    }
+    },
+    // `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ]
 }
 
