@@ -7,23 +7,28 @@ const path = require('path')
 
 module.exports = {
   /* Your site config here */
+  // siteMetaData: {
+  //   title: 'kunsun',
+  //   author: 'kunsun',
+  //   desription: 'writing',
+  //   siteUrl: 'https://kunsun.me',
+  // },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: path.resolve('./src/content/_posts'),
+        path: `${__dirname}/src/content/_posts`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: `images`,
-        path: path.resolve('./src/images'),
-      },
-    },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-sass`,
+        plugins: [{
+          resolve: `gatsby-remark-images`,
+        }]
+      }
+    }
   ]
 }
 

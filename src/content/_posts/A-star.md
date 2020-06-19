@@ -5,7 +5,7 @@ layout: post
 date: "2015-06-09"
 ---
 
-![Kunsun](A-star.jpg "A star")
+![Kunsun](../image/A-star.jpg "A star")
 
 因为算法设计课需要讲算法，阿飞推介的A*算法，正好也与游戏相关，所以就花了一整天时间研究了一下。顺利完成。附图一张。
 <!--more-->
@@ -71,6 +71,7 @@ H主导A*算法的表现方式。
 
 伪代码：
 
+```javascript
 	Add START to OPEN list
 	while OPEN not empty
 		get node n from OPEN that has the lowest f(n)
@@ -88,3 +89,4 @@ H主导A*算法的表现方式。
 	end while
 	
 	if we get to here, then there is No Solution
+```
