@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import '../css/github.css'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
