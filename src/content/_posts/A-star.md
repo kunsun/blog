@@ -3,6 +3,7 @@ path: "/a-star"
 title: A*算法
 layout: post
 date: "2015-06-09"
+featuredImage: ./image/a-star.png
 ---
 
 ![Kunsun](./image/A-star.jpg "A star")
