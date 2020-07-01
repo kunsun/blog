@@ -2,7 +2,8 @@ import React from "react"
 import { Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const Image = () => {
+const Image = ({post}) => {
+  console.log(post)
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "image/A-star.jpg" }) {
@@ -28,7 +29,7 @@ const PostLink = ({ post }) => (
   <div>
     <Link to={post.frontmatter.path}>
       {post.frontmatter.title} ({post.frontmatter.date})
-      <Image />
+      <Image post={post} />
     </Link>
   </div>
 )
