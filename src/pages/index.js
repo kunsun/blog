@@ -33,7 +33,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
-            featuredImage
+            banner {
+              childImageSharp {
+                fixed(width: 70) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }
