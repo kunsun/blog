@@ -3,22 +3,10 @@ import { Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 const Image = ({post}) => {
-  console.log(post)
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "image/A-star.jpg" }) {
-        childImageSharp {
-          fixed(width: 70) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
   return (
     <div>
       <Img
-        fixed={data.file.childImageSharp.fixed}
+        sizes={post.frontmatter.banner.childImageSharp.fluid}
         alt="Gatsby Docs are awesome"
       />
     </div>

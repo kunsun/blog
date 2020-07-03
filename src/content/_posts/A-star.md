@@ -1,9 +1,9 @@
 ---
 path: "/a-star"
-title: A*算法
+title: 'A*算法'
 layout: post
 date: 2015-06-09
-banner: 'image/a-star.png'
+banner: image/A-star.jpg
 ---
 
 ![Kunsun](./image/A-star.jpg "A star")

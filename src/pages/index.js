@@ -35,8 +35,8 @@ export const pageQuery = graphql`
             title
             banner {
               childImageSharp {
-                fixed(width: 70) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 70) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
