@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -r https://e8c8a8c83faa11c3a28b3e530a21338795315c7f@github.com/kunsun/kunsun.github.io.git",
+    "deploy": "gatsby build && gh-pages -d public -b master -r https://d4b240ba0a1b4a57e896358b506d2cd17671f3b7@github.com/kunsun/kunsun.github.io.git",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
