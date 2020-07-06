@@ -1,0 +1,11 @@
+.blog-post {
+  padding-top: 2em;
+  h2 {
+    color: #2c3e50;
+    font-size: 1.5em;
+  }
+  .post-time {
+    color: #7f8c8d;
+    margin: 1.2em 0
+  }
+}

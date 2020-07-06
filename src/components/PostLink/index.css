@@ -1,0 +1,15 @@
+.post-link {
+  padding: 1em 0 2em;
+  border-bottom: 1px solid #ddd;
+  h2 {
+    color: #2c3e50;
+    font-size: 1.5em;
+  }
+  .post-time {
+    color: #7f8c8d;
+    margin: 1.2em 0
+  }
+  .read-more {
+    color: #42b983;
+  }
+}

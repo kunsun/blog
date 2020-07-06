@@ -22,9 +22,11 @@
     "gatsby-plugin-postcss": "^2.3.6",
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-remark-images": "^3.3.14",
+    "gatsby-remark-prismjs": "^3.5.9",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-transformer-remark": "^2.8.20",
     "gatsby-transformer-sharp": "^2.5.7",
+    "prismjs": "^1.20.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

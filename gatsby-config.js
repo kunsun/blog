@@ -28,6 +28,11 @@ module.exports = {
       options: {
         plugins: [{
           resolve: `gatsby-remark-images`,
+        }, {
+          resolve: 'gatsby-remark-prismjs',
+          options: {
+            inlineCodeMarker: '÷',
+          },
         }]
       }
     },

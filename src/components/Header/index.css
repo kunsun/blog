@@ -3,7 +3,7 @@ header.page-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 20px 100px;
+  padding: 20px 60px;
   img {
     height: 60px;
   }

@@ -71,23 +71,6 @@ H主导A*算法的表现方式。
 * H>目前节点到结束点的距离： 不能保证找到最短路劲，但计算比较快。
 
 伪代码：
-
-```javascript
-	Add START to OPEN list
-	while OPEN not empty
-		get node n from OPEN that has the lowest f(n)
-		if n is GOAL then return path
-		move n to CLOSED
-		for each n' = CanMove(n, direction)
-			g(n') = g(n) + 1
-			calculate h(n')
-			if n' in OPEN list and new n' is not better, continue
-			if n' in CLOSED list and new n' is not better, continue
-			remove any n' from OPEN and CLOSED
-			add n as n's parent
-			add n' to OPEN
-		end for
-	end while
-	
-	if we get to here, then there is No Solution
+```jsx
+	console.log('haha')
 ```

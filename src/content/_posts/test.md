@@ -1,6 +1,6 @@
 ---
 path: "/test"
-title: 'test'
+title: '测试'
 date: 2020-07-01
 banner: image/kunsun.jpg
 ---

@@ -28,7 +28,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 180)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path
@@ -36,7 +36,7 @@ export const pageQuery = graphql`
             banner {
               childImageSharp {
                 fluid(maxWidth: 70) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
