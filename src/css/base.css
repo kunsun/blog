@@ -112,7 +112,11 @@ pre[class*='language-'] ::selection {
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: #abb2bf;
+}
+
+.token.parameter {
+  color: #e06c75;
 }
 
 .token.selector,
@@ -128,7 +132,7 @@ pre[class*='language-'] ::selection {
 .token.tag,
 .token.operator,
 .token.keyword {
-  color: #56b6c2;
+  color: #c678dd;
 }
 
 .token.boolean {

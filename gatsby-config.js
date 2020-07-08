@@ -28,11 +28,21 @@ module.exports = {
       options: {
         plugins: [{
           resolve: `gatsby-remark-images`,
-        }, {
-          resolve: 'gatsby-remark-prismjs',
+        }, 
+        // {
+        //   resolve: 'gatsby-remark-prismjs',
+        //   options: {
+        //     inlineCodeMarker: '÷',
+        //   },
+        // }, 
+        {
+          resolve: `gatsby-remark-vscode`,
           options: {
-            inlineCodeMarker: '÷',
-          },
+            theme: 'material-theme',
+            extensions: ['material-theme']
+            // theme: 'One Dark Pro',
+            // extensions: [`${__dirname}/src/themes`]
+          }
         }]
       }
     },
