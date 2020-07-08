@@ -14,7 +14,7 @@ banner: image/kunsun.jpg
 
 
 ### 示例:
-```jsx
+```log
 给定 nums = [2, 7, 11, 15], target = 9
 
 因为 nums[0] + nums[1] = 2 + 7 = 9
@@ -55,9 +55,11 @@ function twoSum(nums, target) {
 
 ### 示例:
 
-```jsx
+```log
 输入: numbers = [2, 7, 11, 15], target = 9
 输出: [1,2]
 解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。
 ```
 
+### 思路：
+一、
