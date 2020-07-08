@@ -16,11 +16,15 @@ html, body {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 3rem;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
-  color: white;
+  color: #abb2bf;
   background: none;
-  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-family: 'Fira Code', Monaco, 'Courier New', Consolas, Menlo, source-code-pro, Courier New, monospace;
   font-feature-settings: normal;
   text-align: left;
   white-space: pre;
@@ -124,7 +128,7 @@ pre[class*='language-'] ::selection {
 .token.tag,
 .token.operator,
 .token.keyword {
-  color: #ffa7c4;
+  color: #56b6c2;
 }
 
 .token.boolean {
@@ -156,10 +160,8 @@ pre[data-line] {
 
 .gatsby-highlight {
   margin-bottom: 1.75rem;
-  margin-left: -1.3125rem;
-  margin-right: -1.3125rem;
   border-radius: 10px;
-  background: #011627;
+  background: #282c34;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }
