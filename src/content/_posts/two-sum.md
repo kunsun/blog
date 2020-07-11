@@ -7,7 +7,7 @@ banner: image/kunsun.jpg
 
 两数之和是一个最基础的算法，今天由浅入深的分析下这个问题。
 
-## 1.0 基础版
+## 1.0 基础版 普通数组的两数之和
 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
 
 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
@@ -42,7 +42,7 @@ function twoSum(nums, target) {
 }
 ```
 
-## 2.0 进阶版
+## 2.0 进阶版，有序数组的两数之和
 
 给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
 
@@ -62,4 +62,92 @@ function twoSum(nums, target) {
 ```
 
 ### 思路：
-一、
+注意是有序数组，所以可以给定双指针，一个指向头部，一个指向尾部，当指针所指向的元素之和大于target，则可以移动大元素的指针向前，反之移动小元素的指针向后，直到和为target。
+
+### 解答：
+```jsx
+var twoSum = function(numbers, target) {
+  let len = numbers.length;
+  let start = 0;
+  let end = len - 1;
+  while(start < end) {
+    if (numbers[start] + numbers[end] > target) {
+      end = end - 1;
+    } else if (numbers[start] + numbers[end] < target) {
+      start = start + 1;
+    } else {
+      return [start + 1, end + 1]
+    }
+  }
+};
+```
+
+## 3.0 两数之和 III - 数据结构设计  
+本题属于leetcode会员才能看的，是一个类的设计题，以后要是成为leetcode会员再来补上。
+
+## 4.0 终极版 BST的两数之和
+给定一个二叉搜索树和一个目标结果，如果 BST 中存在两个元素且它们的和等于给定的目标结果，则返回 true。
+
+案例 1:
+
+输入:
+```log 
+    5
+   / \
+  3   6
+ / \   \
+2   4   7
+
+Target = 9
+
+输出: True
+```
+ 
+案例 2:
+```log
+输入: 
+    5
+   / \
+  3   6
+ / \   \
+2   4   7
+
+Target = 28
+
+输出: False
+```
+
+### 思路
+BST搜索二叉树的特点就是中序遍历后会得到一个有序数组。所以可以先中序遍历，后使用之前的方法。
+
+### 解答
+```jsx
+var findTarget = function(root, k) {
+  let arr = [];
+  var getTree = function(root) {
+    if (root) {
+      getTree(root.left);
+      arr.push(root.val);
+      getTree(root.right);
+    }
+  }
+  getTree(root);
+  return twoSum(arr, k);
+};
+
+var twoSum = function(numbers, target) {
+  let len = numbers.length;
+  let start = 0;
+  let end = len - 1;
+  while(start < end) {
+    if (numbers[start] + numbers[end] > target) {
+      end = end - 1;
+    } else if (numbers[start] + numbers[end] < target) {
+      start = start + 1;
+    } else {
+      return true
+    }
+  }
+  return false
+};
+```

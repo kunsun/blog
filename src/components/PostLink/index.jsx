@@ -18,7 +18,7 @@ const PostLink = ({ post }) => {
   const postItem = post.frontmatter;
   return (
     <div className="post-link">
-      <Link to={postItem.path}>
+      {/* <Link to={postItem.path}>
         <h2>{postItem.title}</h2>
         <div className="post-time">{postItem.date}</div>
         <Image post={post} />
@@ -26,6 +26,9 @@ const PostLink = ({ post }) => {
         <p>{post.excerpt}</p>
       <Link to={postItem.path}>
         <div className="read-more">...阅读更多</div>
+      </Link> */}
+      <Link to={postItem.path}>
+        <h4>{postItem.title}</h4>
       </Link>
     </div>
   )
