@@ -1,6 +1,8 @@
 ---
 path: "/react-hook"
 title: 'React Hook'
+tags:
+  - React
 date: 2020-07-21
 ---
 

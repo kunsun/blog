@@ -2,6 +2,8 @@
 path: "/two-sum"
 title: '两数之和'
 date: 2020-07-06
+tags:
+  - Leetcode
 banner: image/kunsun.jpg
 ---
 

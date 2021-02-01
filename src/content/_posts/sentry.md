@@ -1,6 +1,9 @@
 ---
 path: "/sentry"
 title: '项目引入Sentry'
+tags:
+  - 工具
+  - 错误监控
 date: 2020-07-16
 ---
 

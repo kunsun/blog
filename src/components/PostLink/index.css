@@ -4,10 +4,26 @@
   &:hover {
     background: #f7f7f7;
   }
-  h4 {
-    color: #485763;
-    font-size: 15px;
-    font-weight: 500;
+  .link-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+      color: #485763;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .tags {
+      display: flex;
+      color: rgba(0, 0, 0, .5);
+      font-size: 13px;
+      .tag {
+        background: #e8e8e8;
+        padding: 2px 4px;
+        margin-left: 10px;
+        border-radius: 2px;
+      }
+    }
   }
   .post-time {
     color: #7f8c8d;

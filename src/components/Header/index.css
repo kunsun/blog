@@ -1,11 +1,55 @@
 header.page-header {
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px 60px;
   img {
-    height: 60px;
+    margin-top: 20px;
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+    padding: 4px;
+    border: 1px solid #eaeaea;
+  }
+  .title {
+    margin-top: 14px;
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .sub-title {
+    margin-top: 14px;
+    color: rgba(0, 0, 0, .6);
+  }
+  .social {
+    text-align: center;
+    width: 100%;
+    .icon {
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      margin: 20px 0;
+      &.github {
+        background: url('./image/github-icon.jpg') no-repeat;
+        background-size: contain;
+      }
+      &.resume {
+        margin-left: 20px;
+        height: 22px;
+        width: 22px;
+        background: url('./image/resume-icon-2.png') no-repeat;
+        background-size: contain;
+      }
+    }
+    &::after {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      content: '';
+      height: 1px;
+      background: #f1f1f1;
+    }
   }
   .nav-list {
     display: flex;

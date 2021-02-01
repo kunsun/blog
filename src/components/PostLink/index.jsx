@@ -19,7 +19,20 @@ const PostLink = ({ post }) => {
   return (
     <Link to={postItem.path}>
       <div className="post-link">
-        <h4>{postItem.title}</h4>
+        <div className="link-header">
+          <h4>{postItem.title}</h4>
+          <div className="tags">
+            {
+              postItem.tags ?
+              postItem.tags.map((tag, i) => {
+                return (
+                  <div className="tag" key={i}>#{tag}</div>
+                )
+              })
+              : null
+            }
+          </div>
+        </div>
         <div className="post-time">{postItem.date}</div>
       </div>
     </Link>

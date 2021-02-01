@@ -1,6 +1,8 @@
 ---
 path: "/react-memo"
 title: '如何使用React.memo'
+tags: 
+   - React
 date: 2020-07-11
 ---
 
