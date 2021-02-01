@@ -1,6 +1,6 @@
 ---
 path: "/react-context"
-title: 'React context'
+title: '为什么要使用React Context'
 date: 2020-07-11
 ---
 

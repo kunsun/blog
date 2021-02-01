@@ -1,6 +1,6 @@
 ---
 path: "/sentry"
-title: 'sentry'
+title: '项目引入Sentry'
 date: 2020-07-16
 ---
 

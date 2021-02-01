@@ -5,7 +5,7 @@ import './index.css';
 const Header = () => {
   return (
     <header className='page-header'>
-      <img src={Logo} alt="kunsun"/>
+      {/* <img src={Logo} alt="kunsun"/> */}
       {/* <ul className="nav-list">
         <li className="nav-list-item">
           <a href="/">BLOG</a>

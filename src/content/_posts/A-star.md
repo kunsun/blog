@@ -1,6 +1,6 @@
 ---
 path: "/a-star"
-title: 'A*算法'
+title: '简单介绍A*算法'
 layout: post
 date: 2015-06-09
 banner: image/A-star.jpg
