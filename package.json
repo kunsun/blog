@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gh-pages -d public -b master -r https://cac05af513860ab991890e9e6b468f40df46e17e@github.com/kunsun/kunsun.github.io.git",
+    "deploy": "gh-pages -d public -b master -r https://$GH_TOKEN@github.com/kunsun/kunsun.github.io.git",
     "gh-clean": "gh-pages-clean"
   },
   "dependencies": {
