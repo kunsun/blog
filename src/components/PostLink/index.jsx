@@ -17,7 +17,7 @@ const Image = ({post}) => {
 const PostLink = ({ post }) => {
   const postItem = post.frontmatter;
   return (
-    <Link to={`postItem.path`}>
+    <Link to={postItem.path}>
       <div className="post-link">
         <div className="link-header">
           <h4>{postItem.title}</h4>

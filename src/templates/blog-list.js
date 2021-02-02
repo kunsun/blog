@@ -3,12 +3,14 @@ import { graphql } from "gatsby"
 import PostLink from "../components/PostLink";
 import Header from '../components/Header';
 import Layout from '../components/Layout';
+import Paginator from '../components/Paginator';
+import '../css/blog_list.css';
 
-
-const IndexPage = ({
+const BlogList = ({
   data: {
     allMarkdownRemark: { edges },
   },
+  pageContext,
 }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
@@ -16,11 +18,14 @@ const IndexPage = ({
 
   return <Layout>
     <Header />
-    {Posts}
+    <div className="post-list">
+      {Posts}
+      <Paginator {...pageContext} />
+    </div>
   </Layout>
 }
 
-export default IndexPage
+export default BlogList
 
 export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {

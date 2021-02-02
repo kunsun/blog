@@ -1,0 +1,17 @@
+.paginator {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.paginator-link {
+  font-size: 14px;
+  color: rgba(0, 0, 0, .4);
+  + .paginator-link {
+    margin-left: 40px;
+  }
+  &.active {
+    color: #000;
+  }
+}
