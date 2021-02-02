@@ -2,6 +2,8 @@
 path: "/react-points"
 title: '指引表-React知识点'
 date: 2021-02-02
+tags:
+  - React
 ---
 
 React.js小书： http://huziketang.mangojuice.top/books/react/
