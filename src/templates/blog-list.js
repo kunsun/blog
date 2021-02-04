@@ -8,7 +8,7 @@ import '../css/blog_list.css';
 
 const BlogList = ({
   data: {
-    allMarkdownRemark: { edges },
+    allMdx : { edges },
   },
   pageContext,
 }) => {
@@ -29,7 +29,7 @@ export default BlogList
 
 export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
+    allMdx (
       sort: { order: DESC, fields: [frontmatter___date] },
       limit: $limit
       skip: $skip

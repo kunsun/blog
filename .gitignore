@@ -2,7 +2,8 @@
 
 # gatsby files
 .cache/
-public
+public/
+build/
 
 # Mac files
 .DS_Store

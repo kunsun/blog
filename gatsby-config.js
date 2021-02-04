@@ -18,32 +18,23 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `content/_posts`,
         name: `pages`,
-        path: `${__dirname}/src/content/_posts`,
       },
     },
     `gatsby-remark-images`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [{
-          resolve: `gatsby-remark-images`,
-        }, 
+        extensions: [`.md`, `.mdx`],
+        // plugins: [
         // {
-        //   resolve: 'gatsby-remark-prismjs',
+        //   resolve: `gatsby-remark-vscode`,
         //   options: {
-        //     inlineCodeMarker: '÷',
-        //   },
-        // }, 
-        {
-          resolve: `gatsby-remark-vscode`,
-          options: {
-            theme: 'material-theme',
-            extensions: ['material-theme']
-            // theme: 'One Dark Pro',
-            // extensions: [`${__dirname}/src/themes`]
-          }
-        }]
+        //     theme: 'material-theme',
+        //     extensions: ['material-theme']
+        //   }
+        // }]
       }
     },
     `gatsby-transformer-sharp`,
