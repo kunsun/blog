@@ -1,15 +1,15 @@
 import React from 'react';
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import './index.css';
 
-const Post = ({ frontmatter, html }) => {
+const Post = ({ frontmatter, body }) => {
   return (
     <div className="blog-post">
       <h2>{frontmatter.title}</h2>
       <div className="post-time">{frontmatter.date}</div>
-      <div
-        className="blog-post-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <MDXRenderer>
+        {body}
+      </MDXRenderer>
     </div>
   )
 }

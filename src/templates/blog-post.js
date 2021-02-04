@@ -1,8 +1,7 @@
 import React from "react"
 import Layout from '../components/Layout';
 import Header from '../components/Header';
-// import Post from '../components/Post';
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import Post from '../components/Post';
 import { graphql } from "gatsby"
 
 export default function Template({
@@ -10,13 +9,10 @@ export default function Template({
 }) {
   const { mdx } = data
   const { frontmatter, html, body } = mdx
-  console.log(html, body)
   return (
     <Layout>
       <Header />
-      <MDXRenderer>
-        {body}
-      </MDXRenderer>
+      <Post frontmatter={frontmatter} body={body} />
     </Layout>
   )
 }
