@@ -3,22 +3,22 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-const path = require('path')
+const path = require("path")
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: '',
+  pathPrefix: "",
   siteMetadata: {
-    title: 'kunsun',
-    author: 'kunsun',
-    desription: 'writing',
-    siteUrl: 'https://kunsun.me',
+    title: "kunsun",
+    author: "kunsun",
+    desription: "writing",
+    siteUrl: "https://kunsun.me",
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `content/_posts`,
+        path: `${__dirname}/content/_posts`,
         name: `pages`,
       },
     },
@@ -35,16 +35,16 @@ module.exports = {
         //     extensions: ['material-theme']
         //   }
         // }]
-      }
+      },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require('postcss-nested')]
-      }
-    }
-  ]
+        postCssPlugins: [require("postcss-nested")],
+      },
+    },
+  ],
 }
-
