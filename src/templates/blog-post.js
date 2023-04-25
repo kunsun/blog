@@ -4,27 +4,27 @@ import Header from "../components/Header"
 import Post from "../components/Post"
 import { graphql } from "gatsby"
 
-export default function Template({ data, children }) {
-  console.log({ data, children })
-  const { mdx } = data
-  const { frontmatter, body } = mdx
+export default function Template({ data }) {
+  console.log({ data })
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
   return (
     <Layout>
       {/* <Header /> */}
-      <Post frontmatter={frontmatter} body={body} />
+      <Post frontmatter={frontmatter} body={html} />
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query {
+  query ($id: String) {
     site {
       siteMetadata {
         title
       }
     }
-    mdx {
-      body
+    markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
@@ -33,6 +33,15 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// mdx {
+//   body
+//   frontmatter {
+//     date(formatString: "MMMM DD, YYYY")
+//     path
+//     title
+//   }
+// }
 
 // mdx(frontmatter: { path: { eq: $path } }) {
 //   body
@@ -49,6 +58,19 @@ export const pageQuery = graphql`
 //       title
 //       slug
 //       date(formatString: "MMMM DD, YYYY")
+//     }
+//   }
+// }
+
+// allMarkdownRemark {
+//   edges () {
+//     node(id: {eq: $id}) {
+//       html
+//       frontmatter {
+//         date(formatString: "MMMM DD, YYYY")
+//         path
+//         title
+//       }
 //     }
 //   }
 // }

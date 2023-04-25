@@ -8,10 +8,7 @@ const Post = ({ frontmatter, body }) => {
     <div className="blog-post">
       <h2>{frontmatter.title}</h2>
       <div className="post-time">{frontmatter.date}</div>
-      {/* <MDXProvider> */}
-      {/* <MDXRenderer></MDXRenderer> */}
-      {body}
-      {/* </MDXProvider> */}
+      <div dangerouslySetInnerHTML={{ __html: body }}></div>
     </div>
   )
 }

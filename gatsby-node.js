@@ -9,9 +9,10 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMdx(sort: { frontmatter: { date: DESC } }, limit: 1000) {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 1000) {
         edges {
           node {
+            id
             frontmatter {
               path
             }
@@ -23,7 +24,7 @@ exports.createPages = ({ actions, graphql }) => {
     if (result.errors) {
       throw result.errors
     }
-    const posts = result.data.allMdx.edges
+    const posts = result.data.allMarkdownRemark.edges
     const postsPerPage = 10
     const numPages = Math.ceil(posts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((node, i) => {
@@ -40,6 +41,7 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     posts.forEach(({ node }) => {
+      console.log("hhh", node)
       createPage({
         path: `${node.frontmatter.path}`,
         component: blogPost,
