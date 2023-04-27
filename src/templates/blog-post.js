@@ -10,7 +10,7 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      {/* <Header /> */}
+      <Header />
       <Post frontmatter={frontmatter} body={html} />
     </Layout>
   )

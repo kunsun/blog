@@ -19,14 +19,6 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
-        // plugins: [
-        // {
-        //   resolve: `gatsby-remark-vscode`,
-        //   options: {
-        //     theme: 'material-theme',
-        //     extensions: ['material-theme']
-        //   }
-        // }]
       },
     },
     {
@@ -40,11 +32,5 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require("postcss-nested")],
-      },
-    },
   ],
 }

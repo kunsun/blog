@@ -5,7 +5,7 @@ header.page-header {
   justify-content: center;
   align-items: center;
   padding: 20px 60px;
-  img {
+  > img {
     margin-top: 20px;
     width: 100px;
     height: auto;
@@ -13,14 +13,14 @@ header.page-header {
     padding: 4px;
     border: 1px solid #eaeaea;
   }
-  .title {
+  > .title {
     margin-top: 14px;
     font-size: 28px;
     font-weight: 500;
   }
   .sub-title {
     margin-top: 14px;
-    color: rgba(0, 0, 0, .6);
+    color: rgba(0, 0, 0, 0.6);
   }
   .social {
     text-align: center;
@@ -31,14 +31,14 @@ header.page-header {
       width: 24px;
       margin: 20px 0;
       &.github {
-        background: url('./image/github-icon.jpg') no-repeat;
+        background: url("./image/github-icon.jpg") no-repeat;
         background-size: contain;
       }
       &.resume {
         margin-left: 20px;
         height: 22px;
         width: 22px;
-        background: url('./image/resume-icon-2.png') no-repeat;
+        background: url("./image/resume-icon-2.png") no-repeat;
         background-size: contain;
       }
     }
@@ -46,7 +46,7 @@ header.page-header {
       display: block;
       margin: 0 auto;
       width: 50%;
-      content: '';
+      content: "";
       height: 1px;
       background: #f1f1f1;
     }
