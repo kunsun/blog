@@ -18,7 +18,7 @@
     "@deckdeckgo/highlight-code": "^3.6.0",
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "gatsby": "^5.7.0",
+    "gatsby": "^5.11.0",
     "gatsby-plugin-emotion": "^8.7.0",
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-mdx": "^5.7.0",
