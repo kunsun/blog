@@ -8,13 +8,13 @@ import "../css/blog_list.css"
 
 const BlogList = ({
   data: {
-    allMdx: { edges },
+    allMarkdownRemark: { nodes },
   },
   pageContext,
 }) => {
-  const Posts = edges
-    .filter((edge) => !!edge.node.frontmatter.date)
-    .map((edge) => <PostLink key={edge.node.id} post={edge.node} />)
+  const Posts = nodes
+    .filter((node) => !!node.frontmatter.date)
+    .map((node) => <PostLink key={node.id} post={node} />)
 
   return (
     <Layout>
