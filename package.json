@@ -15,6 +15,7 @@
     "gh-clean": "gh-pages-clean"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^3.6.0",
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "gatsby": "^5.7.0",
@@ -23,6 +24,7 @@
     "gatsby-plugin-mdx": "^5.7.0",
     "gatsby-plugin-postcss": "^6.7.0",
     "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-remark-highlight-code": "^3.3.0",
     "gatsby-remark-images": "^7.7.0",
     "gatsby-remark-prismjs": "^7.7.0",
     "gatsby-remark-vscode": "^3.3.1",

@@ -31,25 +31,26 @@ export default BlogList
 
 export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
-    allMdx(sort: { frontmatter: { date: DESC } }, limit: $limit, skip: $skip) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 180)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-            tags
-            banner {
-              childImageSharp {
-                fluid(maxWidth: 70) {
-                  ...GatsbyImageSharpFluid
-                }
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      limit: $limit
+      skip: $skip
+    ) {
+      nodes {
+        id
+        frontmatter {
+          date
+          title
+          tags
+          banner {
+            childImageSharp {
+              fluid(maxWidth: 70) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
         }
+        excerpt(pruneLength: 180)
       }
     }
   }
