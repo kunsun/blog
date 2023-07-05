@@ -42,6 +42,7 @@ export const pageQuery = graphql`
           date
           title
           tags
+          path
           banner {
             childImageSharp {
               fluid(maxWidth: 70) {
